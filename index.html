@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Generador de Contraseñas</title>
+  <!-- Importar Materialize CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compilado y minificado CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Estilos personalizados -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 300px; /* Ancho máximo del popup */
+      overflow: hidden; /* Evita scroll innecesario */
+    }
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+    .card {
+      margin: 5px 0;
+    }
+    .card-content {
+      padding: 10px;
+    }
+    .input-field input[type=number] {
+      height: 2rem;
+      margin: 0;
+    }
+    .input-field label {
+      font-size: 0.9rem;
+    }
+    .generated-password-text {
+      font-size: 16px;
+      font-weight: bold;
+      word-wrap: break-word;
+    }
+    .btn-small {
+      height: 30px;
+      line-height: 30px;
+    }
+    /* Estilos para la notificación */
+    #notification {
+      display: none;
+      background-color: #4caf50;
+      color: white;
+      padding: 5px;
+      margin-top: 5px;
+      text-align: center;
+      border-radius: 3px;
+      font-size: 0.9rem;
+    }
+    /* Ajustar tamaño de los switches */
+    .switch {
+      margin: 5px 0;
+      display: flex;
+      align-items: center;
+    }
+    .switch label {
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+    .switch input[type="checkbox"] {
+      position: relative;
+      opacity: 1;
+      pointer-events: auto;
+      width: auto;
+      height: auto;
+      margin-right: 10px;
+    }
+    .switch .lever {
+      display: none; /* Ocultamos la palanca original de Materialize */
+    }
+    /* Ocultar el scroll horizontal si aparece */
+    html, body {
+      overflow-x: hidden;
+    }
+    /* Estilos para el encabezado */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header img {
+      width: 40px; /* Ajusta el tamaño de la imagen según sea necesario */
+      height: 40px;
+      margin-right: 10px;
+    }
+    .header h6 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Encabezado con imagen y texto -->
+    <div class="header">
+      <img src="logo.jpeg" alt="Logo">
+      <h6>Generador de Contraseñas</h6>
+    </div>
+
+    <!-- Sección de opciones de generación -->
+    <div class="card">
+      <div class="card-content">
+        <!-- Longitud de la contraseña -->
+        <div class="row" style="margin-bottom: 0;">
+          <div class="input-field col s12" style="margin: 0;">
+            <label for="length" class="active">Longitud de la Contraseña:</label>
+            <input type="number" id="length" min="8" max="100" value="14">
+          </div>
+        </div>
+
+        <!-- Opciones de generación de contraseña con switches a la izquierda -->
+        <div class="row" style="margin-bottom: 0;">
+          <div class="col s12">
+            <!-- Minúsculas -->
+            <div class="switch">
+              <label>
+                <input type="checkbox" id="lowercase" checked>
+                <span class="lever"></span>
+                Minúsculas (a-z)
+              </label>
+            </div>
+            <!-- Mayúsculas -->
+            <div class="switch">
+              <label>
+                <input type="checkbox" id="uppercase" checked>
+                <span class="lever"></span>
+                Mayúsculas (A-Z)
+              </label>
+            </div>
+            <!-- Números -->
+            <div class="switch">
+              <label>
+                <input type="checkbox" id="numbers" checked>
+                <span class="lever"></span>
+                Números (0-9)
+              </label>
+            </div>
+            <!-- Símbolos -->
+            <div class="switch">
+              <label>
+                <input type="checkbox" id="symbols" checked>
+                <span class="lever"></span>
+                Símbolos (!@#$%^&*)
+              </label>
+            </div>
+            <!-- Caracteres Especiales -->
+            <div class="switch">
+              <label>
+                <input type="checkbox" id="specialChars">
+                <span class="lever"></span>
+                Caracteres Especiales ([]{}<>¿¡...)
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón para generar la contraseña -->
+      <div class="card-action center-align" style="padding: 10px;">
+        <a id="generate-button" class="waves-effect waves-light btn-small blue darken-2">Generar Contraseña</a>
+      </div>
+    </div>
+
+    <!-- Mostrar la contraseña generada -->
+    <div class="card-panel center-align" style="padding: 10px;">
+      <p class="generated-password-text" id="generated-password"></p>
+      <a id="copy-button" class="waves-effect waves-light btn-small grey darken-2">Copiar Contraseña</a>
+      <!-- Notificación de copia -->
+      <div id="notification">¡Contraseña copiada al portapapeles!</div>
+    </div>
+  </div>
+
+  <!-- Importar jQuery antes de Materialize JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Compilado y minificado JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Script personalizado -->
+  <script src="script.js"></script>
+</body>
+</html>
