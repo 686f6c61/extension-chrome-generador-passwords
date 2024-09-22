@@ -40,8 +40,7 @@ Extensión para generar contraseñas seguras y aleatorias de manera fácil y rá
 
 ## Capturas de pantalla
 
-_Pronto..._
-
+![Extensión de Contraseñas Seguras](/extension.png)
 ## Tecnologías utilizadas
 
 - HTML5 y CSS3 con Materialize para el diseño y la interfaz de usuario.
