@@ -20,9 +20,15 @@ Extensión para generar contraseñas seguras y aleatorias de manera fácil y rá
 1. Clona o descarga este repositorio en tu máquina local.
 2. Abre el archivo `manifest.json` y asegúrate de que todos los íconos y permisos estén configurados correctamente.
 3. Carga la extensión en tu navegador:
-   - Abre `chrome://extensions/` en Google Chrome o `edge://extensions/` en Microsoft Edge.
-   - Activa el "Modo de desarrollador".
+   - **Google Chrome**: Abre `chrome://extensions/`.
+   - **Microsoft Edge**: Abre `edge://extensions/`.
+   - **Brave**: Abre `brave://extensions/`.
+   - En cualquiera de los navegadores mencionados, activa el "Modo de desarrollador".
    - Haz clic en "Cargar descomprimida" y selecciona la carpeta que contiene los archivos de la extensión.
+
+## Personalización del Logo
+
+Si deseas cambiar el logo de la extensión por uno propio o el de tu empresa, simplemente reemplaza el archivo `logo.png` en el directorio raíz por la imagen que desees. Asegúrate de que el archivo tenga el mismo nombre (`logo.png`) y las dimensiones adecuadas para que se vea correctamente en la barra de herramientas y otras partes del navegador.
 
 ## Uso
 
@@ -41,6 +47,7 @@ Extensión para generar contraseñas seguras y aleatorias de manera fácil y rá
 ## Capturas de pantalla
 
 ![Extensión de Contraseñas Seguras](/extension.png)
+
 ## Tecnologías utilizadas
 
 - HTML5 y CSS3 con Materialize para el diseño y la interfaz de usuario.
