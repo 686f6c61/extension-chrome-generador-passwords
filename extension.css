@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 300px; /* Ancho máximo del popup */
+  overflow: hidden; /* Evita scroll innecesario */
+}
+.container {
+  width: 100%;
+  padding: 10px;
+  padding-top: 5px;
+}
+.card {
+  margin: 5px 0;
+}
+.card-content {
+  padding: 10px;
+  margin-top: 10px;
+}
+.input-field input[type=number] {
+  height: 2rem;
+  margin: 0;
+}
+.input-field label {
+  font-size: 0.9rem;
+}
+.generated-password-text {
+  font-size: 16px;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+.btn-small {
+  height: 30px;
+  line-height: 30px;
+}
+/* Estilos para la notificación */
+#notification {
+  display: none;
+  background-color: #4caf50;
+  color: white;
+  padding: 5px;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+/* Ajustar tamaño de los switches */
+.switch {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+.switch label {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.switch input[type="checkbox"] {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+}
+.switch .lever {
+  display: none; /* Ocultamos la palanca original de Materialize */
+}
+/* Ocultar el scroll horizontal si aparece */
+html, body {
+  overflow-x: hidden;
+}
+/* Estilos para el encabezado */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header img {
+  width: 40px; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: 40px;
+  margin-right: 10px;
+}
+.header h6 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.btn-small {
+  margin-bottom: 5px;
+}
